@@ -3,4 +3,6 @@ client/node_modules/
 models/
 client/build
 client/public/uploads
+client/src/components/DsApi1.js
 test.js
+
