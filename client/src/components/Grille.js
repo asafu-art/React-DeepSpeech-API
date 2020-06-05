@@ -119,7 +119,7 @@ export default function Grille(props) {
     const renderRecognitionOutput = () => {
         return (<List className='list'>
             {props.contenu.map((r) => {
-                return (<ListItem className="message" key={r.id}>{r.text}</ListItem>);
+                return (<ListItem className="message" key={r.id}>{r.text.charAt(0).toUpperCase() + r.text.slice(1)}</ListItem>);
             })}
         </List>)
     };
@@ -250,7 +250,7 @@ export default function Grille(props) {
                                                     {
                                                         uploadedFile ? (
                                                             <div >
-                                                                <p>{uploadedFile.fileName}</p>
+                                                                <p>{uploadedFile.fileName ? uploadedFile.fileName.charAt(0).toUpperCase() + uploadedFile.fileName.slice(1): uploadedFile.fileName }</p>
                                                             </div>
                                                         ) : null
                                                     }

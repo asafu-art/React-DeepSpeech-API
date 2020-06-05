@@ -5,7 +5,7 @@ const fileUpload = require('express-fileupload');
 var ds = require("./ds")
 
 let model = process.env.MODELPATH;
-let beam_width = Number(process.env.BEAM_WIDTH);
+let beam_width = 500;
 let lm = process.env.LM;
 let trie = process.env.TRIE;
 let lm_alpha = Number(process.env.LM_ALPHA);
