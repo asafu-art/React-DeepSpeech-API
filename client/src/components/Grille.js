@@ -386,7 +386,7 @@ export default function Grille(props) {
                                     Common Voice
                                 </Typography>
                                 <Typography variant="body2" color="textSecondary" component="p">
-                                    D asenfaṛ i tebna tesbeddit Mozilla i wakked ad d-tejmeɛ taɣect i yall tutlayt.
+                                    D asenfaṛ i tebna tesbeddit Mozilla i wakken ad d-tejmeɛ taɣect i yall tutlayt.
                                     Skelset taɣect-nwen i wakken ad tesmeɣṛem tagrumma n yisekfa n teqbaylit ar taweḍ 1 200 isragen.
                                 </Typography>
                                 <Typography variant="body2" color="textSecondary" component="p">
