@@ -1,4 +1,4 @@
-import React, { Fragment ,useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AudioPlayer from 'react-h5-audio-player';
 //import 'react-h5-audio-player/lib/styles.css';
@@ -14,6 +14,12 @@ import Button from '@material-ui/core/Button';
 import FormLabel from '@material-ui/core/FormLabel';
 import IconButton from '@material-ui/core/IconButton';
 import AudiotrackIcon from '@material-ui/icons/Audiotrack';
+import Link from '@material-ui/core/Link';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
 
 import PropTypes from 'prop-types';
 import Tabs from '@material-ui/core/Tabs';
@@ -72,6 +78,9 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
     },
+    media: {
+        height: 140,
+    },
     paper: {
         padding: theme.spacing(2),
         textAlign: 'center',
@@ -86,7 +95,7 @@ const useStyles = makeStyles((theme) => ({
     uploads: {
         '& > *': {
             margin: theme.spacing(1),
-          },
+        },
     },
     sidePanel: {
         padding: theme.spacing(2),
@@ -250,7 +259,7 @@ export default function Grille(props) {
                                                     {
                                                         uploadedFile ? (
                                                             <div >
-                                                                <p>{uploadedFile.fileName ? uploadedFile.fileName.charAt(0).toUpperCase() + uploadedFile.fileName.slice(1): uploadedFile.fileName }</p>
+                                                                <p>{uploadedFile.fileName ? uploadedFile.fileName.charAt(0).toUpperCase() + uploadedFile.fileName.slice(1) : uploadedFile.fileName}</p>
                                                             </div>
                                                         ) : null
                                                     }
@@ -290,27 +299,27 @@ export default function Grille(props) {
                                                             className={classes.uploads}
                                                         >
                                                             <Fragment>
-                                                            <input accept="audio/wav"
-                                                                className={classes.input}
-                                                                id="icon-button-file"
-                                                                type="file"
-                                                                onChange={onChange}
-                                                            />
-                                                            <label htmlFor="icon-button-file">
-                                                                <IconButton color="secondary" aria-label="upload picture" component="span" >
-                                                                    <AudiotrackIcon />
-                                                                </IconButton>
-                                                            </label>
+                                                                <input accept="audio/wav"
+                                                                    className={classes.input}
+                                                                    id="icon-button-file"
+                                                                    type="file"
+                                                                    onChange={onChange}
+                                                                />
+                                                                <label htmlFor="icon-button-file">
+                                                                    <IconButton color="secondary" aria-label="upload picture" component="span" >
+                                                                        <AudiotrackIcon />
+                                                                    </IconButton>
+                                                                </label>
 
 
 
-                                                            <Button
-                                                                type='submit'
-                                                                variant="contained"
-                                                                color="primary"
-                                                                size="medium"
-                                                            >
-                                                                Sali
+                                                                <Button
+                                                                    type='submit'
+                                                                    variant="contained"
+                                                                    color="primary"
+                                                                    size="medium"
+                                                                >
+                                                                    Sali
                                                             </Button>
                                                             </Fragment>
                                                         </Grid>
@@ -364,13 +373,46 @@ export default function Grille(props) {
 
                 </Grid>
                 <Grid item xs={4}>
-                    <Paper elevation={1} className={classes.sidePanel}>
-                        <Typography paragraph>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </Typography>
-                    </Paper>
 
-                </Grid>
+                    <Card className={classes.root}>
+                        <CardActionArea>
+                            <CardMedia
+                                className={classes.media}
+                                image="./cv-social.jpg"
+                                title="Contemplative Reptile"
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="h2">
+                                    Common Voice
+                                </Typography>
+                                <Typography variant="body2" color="textSecondary" component="p">
+                                    D asenfaṛ i tebna tesbeddit Mozilla i wakked ad d-tejmeɛ taɣect i yall tutlayt.
+                                    Skelset taɣect-nwen i wakken ad tesmeɣṛem tagrumma n yisekfa n teqbaylit ar taweḍ 1 200 isragen.
+                                </Typography>
+                                <Typography variant="body2" color="textSecondary" component="p">
+                                    S tegrumma-agi, tzemrem ad d-tsuffɣem anagraw n uɛqal n yimesli i teqbaylit s umutur DeepSpeech.
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                    <CardActions>
+
+                        
+                            
+                        <Button size="small" color="primary">
+                        <Link href="https://voice.mozilla.org/kab" >
+                            Common Voice
+                            </Link>
+                             </Button>
+                        <Button size="small" color="primary">
+                        <Link href="https://github.com/MestafaKamal/deepspeech-kabyle" >
+                            DeepSpeech
+                            </Link>
+                        </Button>
+                    </CardActions>
+                    </Card>                
+                    
+
+            </Grid>
 
             </Grid>
         </div >
