@@ -1,8 +1,9 @@
 node_modules/
 client/node_modules/
-models/
+models/D*
+models/*.wav
+models/trie
 client/build
 client/public/uploads
 client/src/components/DsApi1.js
 test.js
-
