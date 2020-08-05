@@ -18,7 +18,7 @@
     "deepspeech": "^0.6.1",
     "dotenv": "^8.2.0",
     "express": "^4.16.4",
-    "express-fileupload": "^1.1.4",
+    "express-fileupload": "^1.1.9",
     "node-vad": "^1.1.4",
     "socket.io": "^2.3.0"
   },
